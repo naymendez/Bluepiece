@@ -39,11 +39,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Suscríbete a nuestras noticias</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Suscribirse">
-            </form>
+           <!-- INSERTAR LOGO O DIRECCION EN GOOGLE MAPS DE BLUEPIECE-->
           </div>
 
         </div>

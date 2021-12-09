@@ -41,7 +41,7 @@
 
                         <button class="btn btn-primary" type="button" onclick="updateFormValue('tipo','Tutor'); showForm('tutor')">Padre o Tutor</button>
                         <button class="btn btn-primary" type="button" onclick="updateFormValue('tipo','Especialista'); showForm('tutor')">Especialista</button>
-                        <button class="btn btn-primary" type="button" onclick="updateFormValue('tipo','Representante'); showForm('tutor')">Representante Empresa</button>
+                        <button class="btn btn-primary" type="button" onclick="updateFormValue('tipo','Representante'); showForm('tutor')">Representante de Institucion</button>
 
 
                     </p>

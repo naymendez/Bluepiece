@@ -1,5 +1,6 @@
 <main id="main">
 
+    <!-- ======= prueba ======= -->
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
         <div class="container">
@@ -24,9 +25,9 @@
 
                     <?php
 
-                    if(!empty($user)) {
+                    if (!empty($user)) {
 
-                    ?>
+                        ?>
 
                         <div class="userArea">
 
@@ -40,28 +41,77 @@
                                         <div class="col-lg-3">
                                             <div class="info-box mb-4">
                                                 <i class="bi bi-file-person"></i>
-                                                <h3><a href="?section=usuario&action=consultar">Consultar mi información</a></h3>
+                                                <h3><a href="?section=usuario&action=consultar">Consultar mi
+                                                        información</a></h3>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-3">
                                             <div class="info-box mb-4">
                                                 <i class="bi bi-file-earmark-person-fill"></i>
-                                                <h3><a href="?section=usuario&action=editar">Editar mi información</a></h3>
+                                                <h3><a href="?section=usuario&action=editar">Editar mi información</a>
+                                                </h3>
                                             </div>
                                         </div>
 
 
+                                        <!-- if para mostrar boton de registrar institucion solo a los usuarios de tipo representante -->
                                         <?php
 
-                                        if($user["tipo"] === "Tutor" || $user["tipo"] === "Especialista") {
+                                        if ($user["tipo"] === "Representante") {
 
 
+                                            ?>
+                                            <div class="col-lg-3">
+                                                <div class="info-box mb-4">
+                                                    <i class="bi bi-file-medical"></i>
+                                                    <h3><a href="?section=institucion&action=registrar">Registrar
+                                                            institucion</a></h3>
+                                                </div>
+                                            </div>
+
+                                        <?php
+
+                                        if ($user["tipo"] === "Representante") {
+
+
+                                            ?>
+                                            <div class="col-lg-3">
+                                                <div class="info-box mb-4">
+                                                    <i class="bi bi-file-medical"></i>
+                                                    <h3><a href="">Registrar
+                                                            un servicio</a></h3>
+                                                </div>
+                                            </div>
+
+                                            <?php
+                                        }
+                                            ?>
+
+                                            <div class="col-lg-3">
+                                                <div class="info-box mb-4">
+                                                    <i class="bi bi-clipboard-data"></i>
+                                                    <h3><a href="?section=institucion&action=listar">Instituciones
+                                                            reigstradas</a></h3>
+                                                </div>
+                                            </div>
+
+
+                                            <?php
+                                        }
                                         ?>
+
+                                        <?php
+
+                                        if ($user["tipo"] === "Tutor" || $user["tipo"] === "Especialista") {
+
+
+                                            ?>
                                             <div class="col-lg-3 col-md-6">
                                                 <div class="info-box  mb-4">
                                                     <i class="bi bi-file-medical"></i>
-                                                    <h3><a href="?section=paciente&action=registrar">Registrar a un <?= $patient ?></a></h3>
+                                                    <h3><a href="?section=paciente&action=registrar">Registrar a
+                                                            un <?= $patient ?></a></h3>
 
                                                 </div>
                                             </div>
@@ -74,20 +124,20 @@
                                                 </div>
                                             </div>
 
-                                        <?php
+                                            <?php
                                         }
                                         ?>
 
                                         <div class="col-lg-3 col-md-6">
                                             <div class="info-box  mb-4">
                                                 <i class="bi bi-exclamation-diamond"></i>
-                                                <h3><a href="?section=usuario&action=eliminar">Eliminar mi Cuenta</a></h3>
+                                                <h3><a href="?section=usuario&action=eliminar">Eliminar mi Cuenta</a>
+                                                </h3>
 
                                             </div>
                                         </div>
 
                                     </div>
-
 
 
                                 </div>
@@ -96,16 +146,17 @@
                         </div>
 
 
-                    <?php
+                        <?php
                     }//IF
 
                     else {
 
-                    ?>
+                        ?>
 
-                        <h3>Lo sentimos, esta área es solo para usuarios, <a href="?section=usuario&action=registrar">registrese</a>.</h3>
+                        <h3>Lo sentimos, esta área es solo para usuarios, <a href="?section=usuario&action=registrar">registrese</a>.
+                        </h3>
 
-                    <?php
+                        <?php
 
                     }//Else
 

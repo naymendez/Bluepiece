@@ -35,6 +35,7 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Edad</th>
                                 <th scope="col">Detalles</th>
+                                <th scope="col">Eliminar</th>
                             </tr>';
 
                     foreach($patients as $paciente) {
@@ -45,6 +46,7 @@
                                 <td scope="row"><?=$paciente["nombre"] . " " . $paciente["apellido"] ?></td>
                                 <td scope="row"><?=$paciente["edad"]?></td>
                                 <td scope="row"><a href="?section=paciente&action=consultar&parameter=<?=$paciente["id"]?>">Ver Detalles</a></td>
+                                <td scope="row"><a href="?section=paciente&action=eliminar&parameter=<?=$paciente["id"]?>">Eliminar</a></td>
                             </tr>
 
 

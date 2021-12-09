@@ -5,10 +5,10 @@
         <div class="container">
 
             <div class="d-flex justify-content-between align-items-center">
-                <h2>Herramienta M-CHAT</h2>
+                <h2>Iniciar sesion</h2>
                 <ol>
                     <li><a href="index.php">Inicio</a></li>
-                    <li>M-CHAT</li>
+                    <li>Login</li>
                 </ol>
             </div>
 
