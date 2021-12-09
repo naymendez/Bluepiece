@@ -12,6 +12,7 @@ class Paciente
 
         $result = Model::insertIntoDb('paciente', $patient);
 
+        //este if es para guardar la relacion entre el paciente y el tutor
         if($result) {
             $relation = [
                 'idTutor' => $_SESSION["user"]["id"],
@@ -33,5 +34,19 @@ class Paciente
         return $data;
 
     }
+
+    public static function deletePaciente($pacienteId) {
+
+        $paciente = [
+            'id' => $pacienteId,
+        ];
+
+        return Model::deleteFromDb('paciente', $paciente) ;
+
+
+    }
+
+
+
 
 }

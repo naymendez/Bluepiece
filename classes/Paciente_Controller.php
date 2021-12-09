@@ -43,6 +43,14 @@ class Paciente_Controller extends Controller
 
     }
 
+    public function eliminar() {
+        $this->patientWord();
+    }
+
+    public function eliminarGetAction($id){
+
+    }
+
     public function consultarGetAction($id)
     {
         $this->patientWord();
